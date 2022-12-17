@@ -2,9 +2,9 @@
 {% block content %}
 
 
-<!-- класс py-5 создает отступы сверху и снизу блока -->
 <div class="container py-5">     
   <h1>{{ text }}</h1>  
+  <article>
 {% for post in posts %}
   <ul>
     <li>
@@ -20,7 +20,7 @@
   {% endif %} 
   {% if not forloop.last %}<hr>{% endif %}
 {% endfor %} 
-  <!-- под последним постом нет линии -->
+  </article>
 </div>  
 
 
