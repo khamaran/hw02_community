@@ -6,8 +6,7 @@ from django.conf import settings
 def index(request):
     posts = Post.objects.all()[:settings.POSTS_COUNT]
     context = {
-        'posts': posts,
-        'title': 'Последние обновления на сайте'
+        'posts': posts
     }
     return render(request, 'posts/index.html', context)
 
@@ -17,7 +16,6 @@ def group_posts(request, slug):
     posts = group.posts.all()[:settings.POSTS_COUNT]
     context = {
         'group': group,
-        'posts': posts,
-        'title': f'Записи сообщества {group}'
+        'posts': posts
     }
     return render(request, 'posts/group_list.html', context)
