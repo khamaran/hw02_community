@@ -22,5 +22,6 @@
           {% if not forloop.last %}<hr>{% endif %}
         <article>
         {% endfor %} 
-      </div>   
+      </div> 
+      {% include 'includes/paginator.html' %}  
 {% endblock %} 
